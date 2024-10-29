@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="保险数据概览和进度追踪页面">
+  <meta name="author" content="Webpixels">
+  <title>SHIELD puls-My Account</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+  <!-- Theme CSS -->
+  <link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
+  <style>
+    .progress-indicator {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .step {
+      text-align: center;
+      margin: 0 10px;
+    }
+    .circle {
+      width: 30px;
+      height: 30px;
+      border: 2px solid #007bff;
+      border-radius: 50%;
+      margin:  52px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: #007bff;
+    }
+    .filled {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-4">
+  <div class="container">
+    <a class="navbar-brand" href="../"><strong>SHIELD</strong> plus</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Overview</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbar_main_dropdown_1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+          <div class="dropdown-menu" aria-labelledby="navbar_1_dropdown_1">
+            <a class="dropdown-item" href="../pages/homepage.html">SHIELD+Zone & Community</a>
+            <a class="dropdown-item" href="../docs/introduction.html">FAQ & Contact Us</a>
+            <a class="dropdown-item" href="../pages/about.html">My Plan</a>
+            <a class="dropdown-item" href="../pages/contact.html">My Account</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/sign-in.html">Sign in</a>
+        </li>
+        <div class="d-flex align-items-center ml-3">
+          <img src="../assets/images/prv/thumb-1.jpg" alt="UESTC Logo" class="rounded-circle" style="width: 40px; height: 40px;">
+          <span class="ml-2" style="color: #000000">UESTC</span>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="main">
+  <section class="slice slice-lg">
+    <div class="container">
+      <h2 class="heading h1 text-center mb-4">My Account</h2>
+      <!-- 用户基本信息表格 -->
+      <div class="row">
+        <div class="col-12">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead class="thead-dark">
+              <tr>
+                <th colspan="2">Basic Information</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Name</td>
+                <td id="displayName">Not filled</td>
+              </tr>
+              <tr>
+                <td>Gender</td>
+                <td id="displayGender">Not filled</td>
+              </tr>
+              <tr>
+                <td>Age</td>
+                <td id="displayAge">Not filled</td>
+              </tr>
+              <tr>
+                <td>Occupation</td>
+                <td id="displayOccupation">Not filled</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="card-title">Your Premium</h3>
+              <p id="yourPremium">Generating</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="card-title">Risk level</h3>
+              <p id="currentRiskLevel">Generating</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="card-title">Approximate Discount</h3>
+              <p id="approximateDiscount">Generating</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <div class="card-body">
+              <h3 class="card-title">Next step</h3>
+              <a href="../pages/report.pdf" class="btn btn-primary" role="button">Get Your Report</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="slice bg-light">
+    <div class="container">
+      <h3 class="heading h3 mb-4">Progress tracking</h3>
+      <div class="progress-indicator">
+        <div class="circle filled">1</div>
+        <div class="circle filled">2</div>
+        <div class="circle filled">3</div>
+        <div class="circle">4</div>
+      </div>
+      <div class="progress-indicator">
+
+        <div class="step" style="margin: 40px;">Fill the Form</div>
+        <div class="step" style="margin: 12px;">Risk Assessment</div>
+        <div class="step" style="margin: 10px;">Calculating Premiums</div>
+        <div class="step" style="margin: 10px;">Apply for SHIELD +</div>
+      </div>
+      <p>Task completion progress: 75%</p>
+      <a href="../docs/file-structure.html" class="btn btn-primary" role="button">Apply for SHIELD+</a>
+    </div>
+  </section>
+  <section class="slice">
+    <div class="container">
+      <h3 class="heading h3 mb-4">Historical records</h3>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Date</th>
+          <th>Premium calculation</th>
+          <th>Risk assessment</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>2024-10-29</td>
+          <td>$1250</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>2024-08-10</td>
+          <td>$1600</td>
+          <td>C</td>
+        </tr>
+        <tr>
+          <td>2024-03-05</td>
+          <td>$1250</td>
+          <td>A</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<footer class="pt-5 pb-3 footer" style="background-color: #324b5f;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <h1 class="heading h6 text-uppercase font-weight-700 mb-3" style="color:#ffffff;"><strong>SHIELD</strong> plus</h1>
+        <p style="color: #ffffff;">Provide high-quality insurance services and community communication platforms to help users achieve the best insurance experience。</p>
+      </div>
+      <div class="col-6 col-md">
+        <h5 class="heading h6 text-uppercase font-weight-700 mb-3" style="color:#ffffff;">Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Autonomous driving assessment</a></li>
+          <li><a class="text-muted" href="#">Premium calculation</a></li>
+          <li><a class="text-muted" href="#">Real time monitoring</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5 class="heading h6 text-uppercase font-weight-700 mb-3" style="color:#ffffff;">Social Media</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="https://instagram.com/webpixelsofficial/" target="_blank">Instagram</a></li>
+          <li><a class="text-muted" href="https://web.facebook.com/webpixels" target="_blank">Facebook</a></li>
+          <li><a class="text-muted" href="https://github.com/webpixels" target="_blank">Github</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md d-flex align-items-center">
+        <a href="../pages/SHIELD plus_English.pdf" class="btn btn-primary ml-auto" role="button">Click Here to Get More Information</a>
+      </div>
+    </div>
+    <hr>
+    <div class="d-flex align-items-center">
+      <span style="color: #ffffff;" >&copy; 2024 chendu80-UESTC. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+<!-- Core -->
+<script src="../assets/vendor/jquery/jquery.min.js"></script>
+<script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+<!-- Theme JS -->
+<script src="../assets/js/theme.js"></script>
+
+<script>
+  window.onload = function() {
+    // 从localStorage检索数据
+    var userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    if (userInfo) {
+      // 更新页面上的信息
+      document.getElementById('displayName').textContent = userInfo.name;
+      document.getElementById('displayGender').textContent = userInfo.gender;
+      document.getElementById('displayAge').textContent = userInfo.age;
+      document.getElementById('displayOccupation').textContent = userInfo.occupation;
+      document.getElementById('yourPremium').textContent = '$1600' ;
+      document.getElementById('currentRiskLevel').textContent = 'A';
+      // 根据风险等级确定折扣
+      // switch (userInfo.riskLevelGrade) {
+      //   case 'A':
+      //     document.getElementById('approximateDiscount').textContent = '25%';
+      //     break;
+      //   case 'B':
+      //     document.getElementById('approximateDiscount').textContent = '20%';
+      //     break;
+      //   case 'C':
+      //     document.getElementById('approximateDiscount').textContent = '10%';
+      //     break;
+      //   case 'D':
+      //     document.getElementById('approximateDiscount').textContent = '0%';
+      //     break;
+      //   default:
+      //     document.getElementById('approximateDiscount').textContent = 'Generating';
+      // }
+      switch (userInfo.riskLevelGrade) {
+        case 'A':
+          document.getElementById('approximateDiscount').textContent = '25%';
+          break;
+        case 'B':
+          document.getElementById('approximateDiscount').textContent = '25%';
+          break;
+        case 'C':
+          document.getElementById('approximateDiscount').textContent = '25%'
+        case 'D':
+          document.getElementById('approximateDiscount').textContent = '25%';
+          break;
+        default:
+          document.getElementById('approximateDiscount').textContent = 'Generating';
+      }
+    }
+  };
+</script>
+
+
+
+</body>
+</html>
